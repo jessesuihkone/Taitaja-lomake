@@ -6,7 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="keywords" content="">
 		<meta name="description" content="">
-		<link href="css.css" rel="stylesheet">
+		<link href="style.css" rel="stylesheet">
 	</head>
 	<body>
 		<header>
@@ -15,41 +15,59 @@
 		
 		<div>
 			<h2>Tilausvahvistuslomakkeen rautalankamalli</h2>
-			<div>
-				<p>Tuotteen tiedot</p>
-				<ul>
-					<li>Rengasmerkki </li>
-					<li>Rengaskoko </li>
-					<li>Tilattu määrä </li>
-					<li>Hinta </li>
-				</ul>
-			</div>
-			<div>
-				<p>Toimitustapa</p>
-				<ul>
-					<li>Nouto liikkeestä </li>
-					<p>tai</p>
-					<li>Matkahuolto </li>
-				</ul>
-			</div>
-			<div>
-				<p>Asiakastiedot </p>
-				<ul>
-					<li>Nimi </li>
-					<li>Postiosoite </li>
-					<li>Sähköpostiosoite </li>
-					<li>Puhelinnumero </li>
-				</ul>
-			</div>
-			<h2>Asiakasrekisterin tietokannan rautalankamalli</h2>
-			<table>
-				<tr>Nimi </tr>
-				<tr>Postiosoite </tr>
-				<tr>Sähköpostiosoite </tr>
-				<tr>Puhelin </tr>
-			</table>
+			<form>
+				<!-- Brand selection -->
+				<label for="tyres">Rengasmerkki: </label>
+				<select id="tyres" name="rengasmerkki">
+					<option value="continental">Continental</option>
+					<option value="nokia">Nokia</option>
+					<option value="matador">Matador</option>
+					<option value="viking">Viking</option>
+				</select>
+				<br>
+				<!-- Tyre size selection -->
+				<label for="size">Rengaskoko </label>
+				<select id="size" name="size">
+					<option value="14">14 </option>
+					<option value="15">15 </option>
+					<option value="16">16 </option>
+					<option value="17">17 </option>
+				</select>
+				<br>
+				<!-- Amount ordered selection -->
+				<label for="amount">Tilattu määrä </label>
+				<select id="amount" name="amount">
+					<option value="1">1 </option>
+					<option value="2">2 </option>
+					<option value="3">3 </option>
+					<option value="4">4 </option>
+				</select><br>
+				<!-- price updating based on selection -->
+				<label for="price">Hinta</label>
+				<br>
+				<input type="text" id="fname" name="price"><br>
+					<label for="name">Nimi:</label><br>
+				<input type="text" id="name" name="name" value=""><br><br>
+				
+				<h2>Toimitustapa </h2>
+				<input type="radio" id="nouto" name="nouto" value="nouto">
+				<label for="nouto">Nouto liikkeestä</label><br>
+				<input type="radio" id="matkahuolto" name="matkahuolto" value="matkahuolto">
+				<label for="matkahuolto">Matkahuolto</label><br>
 		</div>
-	
-		
+		<div>
+			<h2>Asiakastiedot </h2>
+				<!-- Customer information -->
+				<label for="name">Nimi</label>
+				<input type="text"><br>
+				<label for="address">Postiosoite</label>
+				<input type="text"><br>
+				<label for="email">Sähköposti</label>
+				<input type="text"><br>
+				<label for="phone">Puhelin</label>
+				<input type="text">
+				<br>
+				<input type="submit" value="submit">
+		<form>
 	</body>
 </html>
