@@ -1,73 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<title>Renkaat</title>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta name="keywords" content="">
-		<meta name="description" content="">
-		<link href="style.css" rel="stylesheet">
-	</head>
-	<body>
-		<header>
-			<img src="IMG/logo.png" alt="taitaja logo">
-		</header>
-		
-		<div>
-			<h2>Tilausvahvistuslomakkeen rautalankamalli</h2>
-			<form>
-				<!-- Brand selection -->
-				<label for="tyres">Rengasmerkki: </label>
-				<select id="tyres" name="rengasmerkki">
-					<option value="continental">Continental</option>
-					<option value="nokia">Nokia</option>
-					<option value="matador">Matador</option>
-					<option value="viking">Viking</option>
-				</select>
-				<br>
-				<!-- Tyre size selection -->
-				<label for="size">Rengaskoko </label>
-				<select id="size" name="size">
-					<option value="14">14 </option>
-					<option value="15">15 </option>
-					<option value="16">16 </option>
-					<option value="17">17 </option>
-				</select>
-				<br>
-				<!-- Amount ordered selection -->
-				<label for="amount">Tilattu määrä </label>
-				<select id="amount" name="amount">
-					<option value="1">1 </option>
-					<option value="2">2 </option>
-					<option value="3">3 </option>
-					<option value="4">4 </option>
-				</select><br>
-				<!-- price updating based on selection -->
-				<label for="price">Hinta</label>
-				<br>
-				<input type="text" id="fname" name="price"><br>
-					<label for="name">Nimi:</label><br>
-				<input type="text" id="name" name="name" value=""><br><br>
-				
-				<h2>Toimitustapa </h2>
-				<input type="radio" id="nouto" name="nouto" value="nouto">
-				<label for="nouto">Nouto liikkeestä</label><br>
-				<input type="radio" id="matkahuolto" name="matkahuolto" value="matkahuolto">
-				<label for="matkahuolto">Matkahuolto</label><br>
-		</div>
-		<div>
-			<h2>Asiakastiedot </h2>
-				<!-- Customer information -->
-				<label for="name">Nimi</label>
-				<input type="text"><br>
-				<label for="address">Postiosoite</label>
-				<input type="text"><br>
-				<label for="email">Sähköposti</label>
-				<input type="text"><br>
-				<label for="phone">Puhelin</label>
-				<input type="text">
-				<br>
-				<input type="submit" value="submit">
-		<form>
-	</body>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="IMG/logo/favicon.png">
+    <link href='https://fonts.googleapis.com/css?family=Fjalla One' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Sarabun' rel='stylesheet'>
+    <title>Kirjaudu</title>
+</head>
+<body>
+    <nav>
+        <img src="IMG/logo/Logo dark.png" alt="logo">
+        <button class="nav-btn">Kirjaudu</button>
+    </nav>
+    <main>
+        <div class="left-side-main">
+            <h1 id="hero">
+                Tervetuloa,
+                kirjaudu sisälle
+                nähdäksesi
+                säätiedot
+            </h1>
+            <h2>
+                Lorem ipsum dolor sit amet, consectetur
+                adipiscing elit. Nunc dignissim lacinia justo id
+                molestie. Nulla facilisi. Duis eu enim et augue
+                consequat rhoncus. 
+            </h2>
+            <button class="primary-btn">
+                Kirjaudu
+            </button>
+        </div>
+        <div class="right-side-main2">
+            <img src="IMG/babaa.PNG" alt="">
+            <!--
+            <div class="right-side-table-box">
+                <h1>Kuopio</h1>
+                <p>Säätiedot 02.-08.01.2023</p>
+                <table>
+                    <tr>
+                        <th></th>
+                        <th>02.01.2023</th>
+                        <th>03.01.2023</th>
+                        <th>04.01.2023</th>
+                        <th>05.01.2023</th>
+                        <th>06.01.2023</th>
+                        <th>07.01.2023</th>
+                        <th>08.01.2023</th>
+                    </tr>
+                    <tr>
+                        <td>&#127783;Sademäärä(mm)</td>
+                        <td>0.2</td>
+                        <td>2.1</td>
+                        <td>2</td>
+                        <td>0.1</td>
+                        <td>-1</td>
+                        <td>0.1</td>
+                        <td>-1</td>
+                    </tr>
+                    <tr>
+                        <td>&#10052;Lumensyvyys(cm)</td>
+                        <td>14</td>
+                        <td>12</td>
+                        <td>13</td>
+                        <td>16</td>
+                        <td>15</td>
+                        <td>15</td>
+                        <td>14</td>
+                    </tr>
+                    <tr>
+                        <td>&#127777;Ylin lämpötila(degC)</td>
+                        <td>-0.1</td>
+                        <td>-0.3</td>
+                        <td>-2.7</td>
+                        <td>-3.7</td>
+                        <td>-11.9</td>
+                        <td>-7.9</td>
+                        <td>-6.9</td>
+                    </tr>
+                    <tr>
+                        <td>&#127777;Alin lämpötila(degC)</td>
+                        <td>-2.5</td>
+                        <td>-3.5</td>
+                        <td>-3.9</td>
+                        <td>-13.1</td>
+                        <td>-15.8</td>
+                        <td>-15.0</td>
+                        <td>-8.0</td>
+                    </tr>
+                </table>
+            </div>
+            -->
+        </div>
+    </main>
+    <footer>
+        <h2 class="footer-text">Jesse Suihkonen | Lohja Luksia</h2>
+        <h2 class="footer-text">&#169; Taitaja 2023</h2>
+    </footer>
+
+
+</body>
 </html>
